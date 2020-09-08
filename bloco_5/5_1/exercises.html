@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.1</title>
+
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Exercício 5.1 - JavaEscripito </h1>
+    <div class="main-content">
+      <div class="center-content">
+        <p>Texto padrão do nosso site</p>
+        <p>-----</p>
+        <p>Trybe</p>
+      </div>
+    </div>
+    <script>
+
+    // Ex.01 - acrescentar função com futuro daqui 2 anos em um parágrafo
+    function futuro() { 
+      document.getElementsByTagName("p")[1].innerText = "Daqui a 2 anos me vejo em um bom emprego, morando sozinha e viajando sempre que possível."
+    } 
+    futuro()
+
+    // Ex.02 - trocar com de fundo para verde Trybe
+    function fundoVerde() {
+      let fundoVerde = document.getElementsByClassName("main-content");
+      fundoVerde[0].style.backgroundColor = 'rgb(76,164,109)';
+    }
+    fundoVerde()
+
+    // Ex.03 - trocar fundo para branco
+    function fundoBranco() {
+      let fundoBranco = document.querySelectorAll(".main-content .center-content");
+      fundoBranco[0].style.backgroundColor = "white";
+    }
+    fundoBranco()
+
+    // Ex.04 - corrigir texto de h1
+    function corrigeH1() {
+    document.querySelector("h1").innerText = "Exercício 5.1 - JavaScript";
+    }
+    corrigeH1()
+
+    // Ex.05 - coloca tags de p em letras maiusculas
+    function letraMaiuscula() {
+    let p = document.getElementsByTagName("p")[0];
+    p.innerHTML = p.innerHTML.toUpperCase();
+    }
+    letraMaiuscula()
+
+    // Ex.06 - imprime conteúdos dos parágrafos no console
+    function paragrafos() {
+      let ps = document.querySelectorAll("p");
+      for(let i = 0; i < ps.length; i += 1){
+        console.log(ps[i].innerText);
+      }      
+      
+    }
+    paragrafos()
+
+    </script>
+  </body>
+</html>
