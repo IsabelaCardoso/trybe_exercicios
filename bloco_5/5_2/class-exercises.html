@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
+
     <div id="paiDoPai">
-        <div id="pai">
-          <div id="primeiroFilho"></div>
+        <div id="pai"> 
+          <div id="primeiroFilho"> </div>
           <div id="elementoOndeVoceEsta">
             <div id="primeiroFilhoDoFilho"></div>
             <div id="segundoEUltimoFilhoDoFilho"></div>
@@ -20,6 +21,65 @@
       </div>
 </body>
 <script>
+
+  // 1. acessar elementoOndeVoceEsta
+  document.querySelector("#elementoOndeVoceEsta");
+
+  // 2. Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
+  let dad = document.querySelector("#elementoOndeVoceEsta").parentNode;
+  dad.style.color = "blue";
+  
+  // 3. Acesse o primeiroFilhoDoFilho e adicione um texto a ele.
+  document.querySelector("#primeiroFilhoDoFilho").innerText = "Olá, texto do primeiro filho do filho";
+
+  // 4. Acesse o primeiroFilho a partir de pai.
+  console.log(document.querySelector("#pai").firstElementChild);
+  
+  // 5. Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta.
+  console.log(document.querySelector("#elementoOndeVoceEsta").previousElementSibling);
+
+  // 6. Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta.
+  console.log(document.querySelector("#elementoOndeVoceEsta").nextSibling);
+
+  // 7. Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta.
+  console.log(document.querySelector("#elementoOndeVoceEsta").nextElementSibling);
+
+  // 8. Agora acesse o terceiroFilho a partir de pai.
+  let childList = document.querySelector("#pai").childNodes;
+  console.log(childList[5]);
+
+  // Crie um irmão para elementoOndeVoceEsta.
+  let pai = document.querySelector("#pai");
+  let irmaoOndeVoceEsta = document.createElement("div");
+  irmaoOndeVoceEsta.id = "irmaoOndeVoceEsta";
+  pai.appendChild(irmaoOndeVoceEsta);
+
+  // Crie um filho para elementoOndeVoceEsta.
+  let ondeVoceEsta = document.querySelector("#elementoOndeVoceEsta");
+  let filhoOndeVoceEsta = document.createElement("div");
+  filhoOndeVoceEsta.id = "filhoOndeVoceEsta";
+  ondeVoceEsta.appendChild(filhoOndeVoceEsta);
+
+  // Crie um filho para primeiroFilhoDoFilho.
+  let primeiroFilhoDoFilho = document.querySelector("#primeiroFilhoDoFilho");
+  let filhoDoFilhoDoFilho = document.createElement("div");
+  filhoDoFilhoDoFilho.id = "filhoDoFilhoDoFilho";
+  primeiroFilhoDoFilho.appendChild(filhoDoFilhoDoFilho);
+
+  // A partir desse filho \criado, acesse terceiroFilho.
+  let listaFilhos = document.querySelector("#filhoDoFilhoDoFilho").parentNode.parentNode.parentNode.childNodes;
+  console.log(listaFilhos[5]);
+
+  //Remova todos os elementos da página, menos pai, elementoOndeVoceEsta e primeiroFilhoDoFilho.
+ 
+  let primeiroFilho = document.querySelector("#primeiroFilho")
+  pai.removeChild(primeiroFilho);
+  let elementoOndeVoceEsta = document.querySelector("#elementoOndeVoceEsta");
+  let segundoEUltimoFilhoDoFilho = document.querySelector("#segundoEUltimoFilhoDoFilho");
+  elementoOndeVoceEsta.removeChild(segundoEUltimoFilhoDoFilho);
+
+  // etc
+
 
 </script>
 </html>
