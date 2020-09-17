@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Currículos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+        <fieldset>
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" maxlength="40" required="required">
+
+            <label for="email">E-mail:</label>
+            <input type="text" id="email" name="email" maxlength="50" required="required" placeholder="email@exemplo.com.br">
+
+            <label for="cpf">CPF:</label>
+            <input type="number" id="cpf" name="cpf" maxlength="11" required="required" placeholder="Apenas números">
+
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco" maxlength="200" required="required">
+
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade" maxlength="28" required="required">
+
+            <label for="estado">Estado:</label>
+            <select id="estado" name="estado" required="required">
+                <option selected="selected">Selecione</option>
+            </select>  
+            
+            <label for="moradia">Moradia:</label>
+            <input type="radio" id="casa" name="moradia">
+            <span for="casa">Casa</span>
+            <input type="radio" id="apto" name="moradia">
+            <span for="apto">Apartamento</span>
+        </fieldset>
+
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
