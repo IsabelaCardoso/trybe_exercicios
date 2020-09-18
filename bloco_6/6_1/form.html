@@ -7,35 +7,63 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form>
-        <fieldset>
-            <label for="name">Nome:</label>
-            <input type="text" id="name" name="name" maxlength="40" required="required">
-
-            <label for="email">E-mail:</label>
-            <input type="text" id="email" name="email" maxlength="50" required="required" placeholder="email@exemplo.com.br">
-
-            <label for="cpf">CPF:</label>
-            <input type="number" id="cpf" name="cpf" maxlength="11" required="required" placeholder="Apenas números">
-
-            <label for="endereco">Endereço:</label>
-            <input type="text" id="endereco" name="endereco" maxlength="200" required="required">
-
-            <label for="cidade">Cidade:</label>
-            <input type="text" id="cidade" name="cidade" maxlength="28" required="required">
-
-            <label for="estado">Estado:</label>
-            <select id="estado" name="estado" required="required">
-                <option selected="selected">Selecione</option>
-            </select>  
-            
-            <label for="moradia">Moradia:</label>
-            <input type="radio" id="casa" name="moradia">
-            <span for="casa">Casa</span>
-            <input type="radio" id="apto" name="moradia">
-            <span for="apto">Apartamento</span>
+    <form id="form">
+        <fieldset class="sessoes">
+            <div class="form-options">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" maxlength="40" required="required">
+            </div>
+            <div class="form-options">
+                <label for="email">E-mail:</label>
+                <input type="text" id="email" name="email" maxlength="50" required="required" placeholder="email@exemplo.com.br">
+            </div>
+            <div class="form-options">    
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf" minlength="10" maxlength="11" required="required" placeholder="Digite apenas números">
+            </div>
+            <div class="form-options">   
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco" maxlength="200" required="required">
+            </div>
+            <div class="form-options">   
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" name="cidade" maxlength="28" required="required">
+            </div>
+            <div class="form-options">   
+                <label for="estado">Estado:</label>
+                <select id="estado" name="estado" required="required">
+                    <option selected="selected">Selecione</option>
+                </select>  
+            </div>
+            <div class="form-options">   
+                <label for="moradia">Moradia:</label>
+                <input type="radio" id="casa" name="moradia">
+                <span for="casa">Casa</span>
+                <input type="radio" id="apto" name="moradia">
+                <span for="apto">Apartamento</span>
+            </div>
         </fieldset>
 
+        <fieldset class="sessoes">
+            <div class="form-options">                  
+                <label for="resumo-curriculo">Resumo do currículo:</label><br>
+                <textarea name="resumo-curriculo" maxlength="1000" cols="25" rows="3" required="required" placeholder="Até 1.000 caracteres"></textarea>
+            </div>
+            <div class="form-options">  
+                <label for="cargo">Cargo:</label>
+                <input type="text" id="cargo" name="cargo" maxlength="40" required="required">
+            </div>
+            <div class="form-options">  
+                <label for="descricao-cargo">Resumo do currículo:</label><br>
+                <textarea name="descricao-cargo" maxlength="500" cols="25" rows="3" required="required" placeholder="Até 500 caracteres"></textarea>
+
+                <input type="date" id="data-inicio" name="data-inicio" min="01-01-1950" max="31-12-2020" required="required">
+            </div>
+        </fieldset>
+
+        <button id="botao-finalizar" class="botao-finalizar">Finalizar</button>
+        <br><br>
+        <button id="botao-limpar" class="botao-limpar">Limpar Dados</button>
     </form>
     <script src="script.js"></script>
 </body>

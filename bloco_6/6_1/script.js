@@ -35,3 +35,31 @@ for(index = 0; index < estados.length; index += 1){
     estado.appendChild(itensLista);
 }
 
+// função para criar div currículo
+let botaoFinalizar = document.querySelector("#botao-finalizar");
+let body = document.querySelector("body");
+botaoFinalizar.addEventListener("click", function(event){
+    event.preventDefault();
+    let nome = document.querySelector("#name").value+'<br>'; 
+    let email = document.querySelector("#email").value+'<br>'; 
+    let cpf = document.querySelector("#cpf").value+'<br>'; 
+    let endereco = document.querySelector("#endereco").value+'<br>'; 
+    let cidade = document.querySelector("#cidade").value+'<br>'; 
+    let estado = document.querySelector("#estado").value+'<br>'; 
+    let curriculo = document.createElement("div");
+
+    body.appendChild(curriculo);
+    curriculo.innerHTML = `Nome: ${nome} E-mail: ${email} CPF: ${cpf} Endereço: ${endereco}Cidade: ${cidade} Estado: ${estado}`;
+
+
+})
+    
+
+// botão para limpar 
+let botaoLimpar = document.querySelector("#botao-limpar");
+botaoLimpar.addEventListener("click", function(event){
+    event.preventDefault();
+    document.getElementById("form").reset();
+});
+
+
