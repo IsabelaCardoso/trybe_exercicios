@@ -1,3 +1,4 @@
+console.log("teste")
 let estados = [
     'Acre',
     'Alagoas',
@@ -33,7 +34,7 @@ for(index = 0; index < estados.length; index += 1){
     let itensLista = document.createElement("option");
     itensLista.innerHTML = estados[index];
     estado.appendChild(itensLista);
-}
+};
 
 // função para criar div currículo
 let botaoFinalizar = document.querySelector("#botao-finalizar");
@@ -51,9 +52,7 @@ botaoFinalizar.addEventListener("click", function(event){
     body.appendChild(curriculo);
     curriculo.innerHTML = `Nome: ${nome} E-mail: ${email} CPF: ${cpf} Endereço: ${endereco}Cidade: ${cidade} Estado: ${estado}`;
 
-
-})
-    
+});    
 
 // botão para limpar 
 let botaoLimpar = document.querySelector("#botao-limpar");
