@@ -1,1 +1,1 @@
-Pasta de exercícios da turma 07 do curso de formação da Trybe, agosto 2020.
+Pasta de exercícios desenvolvidos durante o curso de formação de Desenvolvimento de Software, turma 07, na Trybe. 
