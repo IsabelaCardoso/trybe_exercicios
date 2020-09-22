@@ -1,0 +1,63 @@
+/* FLEXBOX FROGGY */
+/* https://flexboxfroggy.com/ */
+
+/* exercício 1 */
+justify-content: flex-end;
+/* exercício 2 */
+justify-content: center;
+/* exercício 3 */
+justify-content: space-around;
+/* exercício 4 */
+justify-content: space-between;
+/* exercício 5 */
+align-items: flex-end;
+/* exercício 6 */
+justify-content: center;
+align-items: center;
+/* exercício 7 */
+justify-content: space-around;
+align-items: flex-end;
+/* exercício 8 */
+flex-direction: row-reverse;
+/* exercício 9 */
+flex-direction: column;
+/* exercício 10 */
+flex-direction: row-reverse;
+justify-content: flex-end;
+/* exercício 11 */ 
+flex-direction: column;
+justify-content: flex-end;
+/* exercício 12 */
+flex-direction: column-reverse;
+justify-content: space-between;
+/* exercício 13 */
+flex-direction: row-reverse;
+justify-content: center;
+align-items: flex-end;
+/* exercício 14 */
+order: 1
+/* exercício 15 */
+order: -2
+/* exercício 16 */
+align-self: flex-end;
+/* exercício 17 */
+order: 1;
+align-self: flex-end;
+/* exercício 18 */
+flex-wrap: wrap;
+/* exercício 19  */
+flex-direction: column;
+flex-wrap: wrap;
+/* exercício 20 */
+flex-flow: column wrap
+/* exercício 21 */
+align-content: flex-start;
+/* exercício 22 */
+align-content: flex-end;
+/* exercício 23 */
+flex-direction: column-reverse;
+align-content: center;
+/* exercício 24 */
+flex-flow: column-reverse wrap-reverse;
+align-content: space-between;
+justify-content: center
