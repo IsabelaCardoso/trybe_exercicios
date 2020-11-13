@@ -1,0 +1,31 @@
+/* FLEXBOX FROGGY */
+/* https://flexboxfroggy.com/ */
+/* 14 a 24 */
+
+/* exercício 14 */
+order: 1
+/* exercício 15 */
+order: -2
+/* exercício 16 */
+align-self: flex-end;
+/* exercício 17 */
+order: 1;
+align-self: flex-end;
+/* exercício 18 */
+flex-wrap: wrap;
+/* exercício 19  */
+flex-direction: column;
+flex-wrap: wrap;
+/* exercício 20 */
+flex-flow: column wrap
+/* exercício 21 */
+align-content: flex-start;
+/* exercício 22 */
+align-content: flex-end;
+/* exercício 23 */
+flex-direction: column-reverse;
+align-content: center;
+/* exercício 24 */
+flex-flow: column-reverse wrap-reverse;
+align-content: space-between;
+justify-content: center
